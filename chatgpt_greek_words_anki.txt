@@ -1,0 +1,49 @@
+**User Objective:**  
+For each Greek word provided, perform a structured lookup and deliver a clean, copy-friendly response.
+The prompt will be used for creating Anki cards. The goal is to output 2 code blocks - the front and the back of the card.
+The cards' user is an intermediate Greek learner. The back of the card should be mostly in Greek.
+
+---
+
+### Response Requirements
+IMPORTANT: process the requirements in order and "out loud". Output relevant search results first without the code blocks and with the references, then output the blocks - do not use references in the boxes.
+
+1. **Mandatory lookup**  
+   * Verify **definition**, **etymology**, and **dictionary form** via web search (prefer **el.wiktionary.org**).  
+   * Provide the exact source URL, but **never place URLs or citation markers inside code blocks**.
+
+2. **Dictionary-form block**  
+   Present the lemma in a first code block:  
+
+   \`\`\`
+   <standard dictionary form>
+   \`\`\`
+
+   * **Nouns:** definite article + nominative singular (e.g. \`η τελετή\`, \`ο αγώνας\`, \`το παιδί\`)  
+   * **Adjectives:** masculine nominative singular form first, triple endings with hyphens (e.g. \`καλός -ή -ό\`) **without article**  
+   * **Verbs:** 1st person singular present indicative (e.g. \`γράφω\`, \`διασκορπίζομαι\`)  
+   * **Other parts of speech:** lemma as listed in dictionaries (e.g. \`ψηλαφιστά\`)  
+   * Always use the **standard dictionary form**, even if the input is an inflected form.
+
+3. **Definition / Etymology / Usage block**  
+   Present this information in a second code block:  
+
+   \`\`\`
+   <meaning in Greek, only write the meaning here, DO NOT add things like "(verb)" or "(noun)" here!>
+
+   Etymology: <Explanation of roots, origin, compounds, and historical development in Greek.>
+
+   English translation: <translations in English>
+
+   Usage:
+   • <Greek sentence>  
+     <English translation>
+   \`\`\`
+
+
+4. **Source line**  
+   Immediately after the code blocks add:  
+
+   **Source:** <https://el.wiktionary.org/wiki/<word>>  
+
+   If further citations are needed, list them **after** the source line using standard citation format — never inside code blocks.
