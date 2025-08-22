@@ -9,8 +9,10 @@ The cards' user is an intermediate Greek learner. The back of the card should be
 IMPORTANT: process the requirements in order and "out loud". Output relevant search results first without the code blocks and with the references, then output the blocks - do not use references in the boxes.
 
 1. **Mandatory lookup**  
-   * Verify **definition**, **etymology**, and **dictionary form** via web search (prefer **el.wiktionary.org**).  
-   * Provide the exact source URL, but **never place URLs or citation markers inside code blocks**.
+   - Verify **dictionary form**, **definition**, **etymology**, and **examples** using primarily **el.wiktionary.org**.  
+   - Normalize any inflected forms to the **standard lemma**.  
+   - If the input is a **phrase** (e.g. “μπας και”), keep it unchanged.  
+   - Provide the exact source URL (never inside code blocks).  
 
 2. **Dictionary-form block**  
    Present the lemma in a first code block:  
@@ -25,7 +27,12 @@ IMPORTANT: process the requirements in order and "out loud". Output relevant sea
    * **Other parts of speech:** lemma as listed in dictionaries (e.g. \`ψηλαφιστά\`)  
    * Always use the **standard dictionary form**, even if the input is an inflected form.
 
-3. **Definition / Etymology / Usage block**  
+   NOTE: If the input is an inflected form, always normalize to the standard lemma (e.g. αλλεπάλληλες → αλλεπάλληλος -η -ο, εξιχνιάσει → εξιχνιάζω).
+
+3. **Definition / Etymology / Usage block** 
+   Keep the etymology brief and in Greek, not overly scholarly.
+   Always mention if it’s from Ancient Greek, Katharevousa, or a compound (e.g. συνταρακτικός < συνταράσσω + -τικός).
+
    Present this information in a second code block:  
 
    \`\`\`
@@ -39,6 +46,8 @@ IMPORTANT: process the requirements in order and "out loud". Output relevant sea
    • <Greek sentence>  
      <English translation>
    \`\`\`
+
+
 
 
 4. **Source line**  
